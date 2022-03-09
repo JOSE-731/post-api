@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
-use App\Models\Api\v1\Posts;
+use App\Http\Controllers\Controller;
+use App\Models\Posts;
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -31,7 +32,7 @@ class PostsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Api\v1\Posts  $posts
+     * @param  \App\Models\Posts  $posts
      * @return \Illuminate\Http\Response
      */
     public function show(Posts $posts)
@@ -43,7 +44,7 @@ class PostsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Api\v1\Posts  $posts
+     * @param  \App\Models\Posts  $posts
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Posts $posts)
@@ -54,7 +55,7 @@ class PostsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Api\v1\Posts  $posts
+     * @param  \App\Models\Posts  $posts
      * @return \Illuminate\Http\Response
      */
     public function destroy(Posts $posts)

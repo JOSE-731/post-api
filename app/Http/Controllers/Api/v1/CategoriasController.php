@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\v1;
 
-use App\Models\Api\v1\Categorias;
+use App\Http\Controllers\Controller;
+use App\Models\Categorias;
 use Illuminate\Http\Request;
 
 class CategoriasController extends Controller
@@ -31,7 +32,7 @@ class CategoriasController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Api\v1\Categorias  $categorias
+     * @param  \App\Models\Categorias  $categorias
      * @return \Illuminate\Http\Response
      */
     public function show(Categorias $categorias)
@@ -43,7 +44,7 @@ class CategoriasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Api\v1\Categorias  $categorias
+     * @param  \App\Models\Categorias  $categorias
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Categorias $categorias)
@@ -54,7 +55,7 @@ class CategoriasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Api\v1\Categorias  $categorias
+     * @param  \App\Models\Categorias  $categorias
      * @return \Illuminate\Http\Response
      */
     public function destroy(Categorias $categorias)
