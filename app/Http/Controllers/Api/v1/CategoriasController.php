@@ -61,8 +61,10 @@ class CategoriasController extends Controller
      * @param  \App\Models\Categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categorias $categorias)
+    public function destroy($id)
     {
-        //
+        Categorias::destroy($id);
+
+        return response('Eliminado exitosamente', 200);
     }
 }

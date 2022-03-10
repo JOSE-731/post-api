@@ -62,8 +62,10 @@ class PostsController extends Controller
      * @param  \App\Models\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Posts $posts)
+    public function destroy($id)
     {
-        //
+        Posts::destroy($id);
+
+        return response('Eliminado exitosamente', 200);
     }
 }
