@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use App\Models\Posts;
 use Illuminate\Http\Request;
 
+use App\Http\Resources\v1\PostsResource;
+use App\Http\Resources\v1\PostsCollection;
+
+
 class PostsController extends Controller
 {
     /**

@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Comentarios;
 use Illuminate\Http\Request;
 
+use App\Http\Resources\v1\ComentariosResource;
+use App\Http\Resources\v1\ComentariosCollection;
+
 class ComentariosController extends Controller
 {
     /**
