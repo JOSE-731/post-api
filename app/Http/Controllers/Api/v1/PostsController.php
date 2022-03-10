@@ -39,9 +39,9 @@ class PostsController extends Controller
      * @param  \App\Models\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function show(Posts $posts)
+    public function show($id)
     {
-        //
+        return new PostsResource(Posts::findOrFail($id));
     }
 
     /**

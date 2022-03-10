@@ -38,9 +38,9 @@ class ComentariosController extends Controller
      * @param  \App\Models\Comentarios  $comentarios
      * @return \Illuminate\Http\Response
      */
-    public function show(Comentarios $comentarios)
+    public function show($id)
     {
-        //
+        return new ComentariosResource(Comentarios::findOrFail($id));
     }
 
     /**

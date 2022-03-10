@@ -38,9 +38,9 @@ class CategoriasController extends Controller
      * @param  \App\Models\Categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function show(Categorias $categorias)
+    public function show($id)
     {
-        //
+        return new CategoriasResource(Categorias::findOrFail($id));
     }
 
     /**

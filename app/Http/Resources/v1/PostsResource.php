@@ -14,6 +14,13 @@ class PostsResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        //Pasamos los datos que queremos que se vean en la vista
+        return[
+            'id' => $this->id,
+            'titulo' => $this->titulo,
+            'contenido' => $this->contenido,
+            'create_at' => $this->create_at,
+            'updated_at' => $this->updated_at
+        ];
     }
 }

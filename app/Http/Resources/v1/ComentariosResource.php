@@ -14,6 +14,10 @@ class ComentariosResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return[
+            'id' => $this->id,
+            'contenido' => $this->contenido,
+            'create_at' => $this->create_at,
+        ];
     }
 }
