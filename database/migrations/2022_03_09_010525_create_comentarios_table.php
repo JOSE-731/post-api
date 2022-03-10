@@ -15,7 +15,10 @@ class CreateComentariosTable extends Migration
     {
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id();
-            //post id
+            $table->foreignId('posts_id')
+                  ->nullable()->constrained('posts')
+                  ->cascadeOnUpdate('posts')
+                  ->cascadeOnDelete();
             $table->string('contenido', 500);
             $table->timestamps();
         });

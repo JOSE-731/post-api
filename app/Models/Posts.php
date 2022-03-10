@@ -13,6 +13,6 @@ class Posts extends Model
      protected $table = "posts";
 
      //Nombre de los campos
-     protected $fillable = ['titulo', 'contenido'];
+     protected $fillable = ['categorias_id','titulo', 'contenido'];
      
     }

@@ -13,6 +13,6 @@ class Comentarios extends Model
      protected $table = "comentarios";
 
      //Nombre de los campos
-     protected $fillable = [ 'contenido'];
+     protected $fillable = [ 'posts_id','contenido'];
 
 }
