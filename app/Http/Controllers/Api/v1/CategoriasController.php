@@ -18,7 +18,7 @@ class CategoriasController extends Controller
      */
     public function index()
     {
-        //
+        return new CategoriasCollection(Categorias::latest()->paginate());
     }
 
     /**

@@ -18,7 +18,7 @@ class ComentariosController extends Controller
      */
     public function index()
     {
-        //
+        return new ComentariosCollection(Comentarios::latest()->paginate());
     }
 
     /**

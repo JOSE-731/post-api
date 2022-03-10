@@ -14,6 +14,11 @@ class ComentariosCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'data' => $this->collection,
+            'meta' =>[
+                'Autor' => 'Jose Diaz'
+            ]
+        ];
     }
 }
