@@ -29,7 +29,15 @@ class CategoriasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //pendiente
+        $request->except('update_at');
+        $categorias = new Categorias;
+ 
+        $categorias->nombre = $request->nombre;
+ 
+        $categorias->save();
+
+        return response('Guardado exitosamente', 200);
     }
 
     /**
