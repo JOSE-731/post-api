@@ -17,8 +17,7 @@ class CreateComentariosTable extends Migration
             $table->id();
             //post id
             $table->string('contenido', 500);
-            $table->timestamps('fecha_creacion');
-            $table->timestamp('fecha_actualizacion');
+            $table->timestamps();
         });
     }
 

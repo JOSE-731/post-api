@@ -18,8 +18,7 @@ class CreatePostsTable extends Migration
             //categoria_id
             $table->string('titulo', 150);
             $table->text('contenido');
-            $table->timestamps('fecha_creacion');
-            $table->timestamp('fecha_actualizacion');
+            $table->timestamps();
         });
     }
 
