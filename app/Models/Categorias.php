@@ -13,5 +13,6 @@ class Categorias extends Model
      protected $table = "categorias";
 
      //Nombre de los campos
-     protected $fillable = ['id', 'nombre', 'fecha_creacion', 'fecha_actualizacion'];
+     protected $fillable = ['nombre'];
+
 }
