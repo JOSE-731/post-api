@@ -19,7 +19,8 @@ class PostsResource extends JsonResource
             'id' => $this->id,
             'titulo' => $this->titulo,
             'contenido' => $this->contenido,
-            'create_at' => $this->create_at,
+            'categoria_id' => $this->categoria_id,
+            'created_at' => $this->created_at,
             'updated_at' => $this->updated_at
         ];
     }

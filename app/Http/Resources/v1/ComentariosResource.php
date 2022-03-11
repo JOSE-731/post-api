@@ -17,7 +17,9 @@ class ComentariosResource extends JsonResource
         return[
             'id' => $this->id,
             'contenido' => $this->contenido,
-            'create_at' => $this->create_at,
+            'posts_id' => $this->posts_id,
+            'created_at' => $this->created_at,
+            'updated_at' => $this->updated_at
         ];
     }
 }
