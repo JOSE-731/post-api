@@ -14,5 +14,17 @@ class Posts extends Model
 
      //Nombre de los campos
      protected $fillable = ['categorias_id','titulo', 'contenido'];
+
+     public function categoria(){
+        
+        return $this->belongsTo(Categorias::class, 'categoria_id');
+    }
+
+
+    public function comentarios(){
+        
+        return $this->hasMany(Comentarios::class, 'posts_id');
+    }
+
      
     }

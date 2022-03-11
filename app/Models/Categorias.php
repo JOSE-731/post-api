@@ -15,4 +15,9 @@ class Categorias extends Model
      //Nombre de los campos
      protected $fillable = ['nombre'];
 
+     public function posts(){
+        
+        return $this->hasMany(Posts::class, 'id');
+    }
+
 }

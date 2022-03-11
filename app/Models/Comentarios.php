@@ -15,4 +15,9 @@ class Comentarios extends Model
      //Nombre de los campos
      protected $fillable = [ 'posts_id','contenido'];
 
+     public function posts(){
+        
+        return $this->belongsTo(Posts::class, 'id');
+    }
+
 }
