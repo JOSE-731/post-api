@@ -30,7 +30,26 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        /* 
+          {
+            "titulo": "test",
+            "contenido": "Quis alias quidam.",
+            "categoria_id": 11
+          }         
+        */
+        $posts = new Posts;
+
+        $posts->categoria_id = $request->categoria_id;
+
+        $posts->titulo = $request->titulo;
+
+        $posts->contenido = $request->contenido;
+
+        $posts->save();
+
+        return response('Guardado exitosamente', 200);
+
     }
 
     /**
@@ -51,9 +70,19 @@ class PostsController extends Controller
      * @param  \App\Models\Posts  $posts
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Posts $posts)
+    public function update(Request $request, $id)
     {
-        //
+        $postsUpdate = Posts::find($id);
+
+        $postsUpdate->categoria_id = $request->categoria_id;
+
+        $postsUpdate->titulo = $request->titulo;
+
+        $postsUpdate->contenido = $request->contenido;
+
+        $postsUpdate->save();
+
+        return response('Editado exitosamente', 200);
     }
 
     /**
