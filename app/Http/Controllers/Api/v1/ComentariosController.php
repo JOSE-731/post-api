@@ -29,7 +29,22 @@ class ComentariosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        /*{
+            "posts_id" : 2,
+            "contenido" : "data"
+        }*/
+
+        $comentarios = new Comentarios;
+
+        $comentarios->posts_id = $request->posts_id;
+
+        $comentarios->contenido = $request->contenido;
+
+        $comentarios->save();
+
+        return response('Guardado exitosamente', 200);
+
     }
 
     /**
@@ -50,9 +65,17 @@ class ComentariosController extends Controller
      * @param  \App\Models\Comentarios  $comentarios
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comentarios $comentarios)
+    public function update(Request $request, $id)
     {
-        //
+        $comentarioUpdate = Comentarios::find($id);
+
+        $comentarioUpdate->posts_id = $request->posts_id;
+
+        $comentarioUpdate->contenido = $request->contenido;
+
+        $comentarioUpdate->save();
+
+        return response('Editado exitosamente', 200);
     }
 
     /**
