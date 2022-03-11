@@ -14,6 +14,8 @@ class Comentarios extends Model
 
      //Nombre de los campos
      protected $fillable = [ 'posts_id','contenido'];
+     
+     public $timestamps = true;
 
      public function posts(){
         

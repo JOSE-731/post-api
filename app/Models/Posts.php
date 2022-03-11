@@ -15,6 +15,8 @@ class Posts extends Model
      //Nombre de los campos
      protected $fillable = ['categorias_id','titulo', 'contenido'];
 
+     public $timestamps = true;
+     
      public function categoria(){
         
         return $this->belongsTo(Categorias::class, 'categoria_id');

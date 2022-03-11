@@ -30,7 +30,7 @@ class CategoriasController extends Controller
     public function store(Request $request)
     {
         //pendiente
-        $request->except('update_at');
+        $data = request()->except('updated_at');
         $categorias = new Categorias;
  
         $categorias->nombre = $request->nombre;
@@ -58,9 +58,15 @@ class CategoriasController extends Controller
      * @param  \App\Models\Categorias  $categorias
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Categorias $categorias)
+    public function update(Request $request, $id)
     {
-        //
+        $categoriaUpdate = Categorias::find($id);
+        
+        $categoriaUpdate->nombre = $request->nombre;
+ 
+        $categoriaUpdate->save();
+
+        return response('Guardado exitosamente', 200);
     }
 
     /**
