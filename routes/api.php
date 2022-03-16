@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\Api\v1\CategoriasController;
-use App\Http\Controllers\Api\v1\ComentariosController;
-use App\Http\Controllers\Api\V1\PostsController;
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+
+use App\Http\Controllers\Api\v1\PostsController;
+use App\Http\Controllers\Api\v1\CategoriasController;
+use App\Http\Controllers\Api\v1\ComentariosController;
 
 
 Route::apiResource('v1/posts', PostsController::class);
